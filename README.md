@@ -24,7 +24,7 @@ Begin by importing the 'hashlib' module, a widely-recognized Python module used 
 <img src="https://i.imgur.com/o3MrBNP.png" height="30%" width="30%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Our first function 'hash_calc' takes the argument 'fname', which represents the name of the file that we will be checking. Next, the file is opened and read in binary mode ('rb'), and stored into the variable 'bytes'. Line 7 follows the 'hashlib' syntax 'hash.hexdigest()', which returns a hash of the file as a string object. As a result, this function calculates and returns the SHA-256 hash of a file, and will be called later in the script.   
+The first function 'hash_calc' takes the argument 'fname', which represents the name of the file that we will be checking. Next, the file is opened and read in binary mode ('rb'), and stored into the variable 'bytes'. Line 7 follows the 'hashlib' syntax 'hash.hexdigest()', which returns a hash of the file as a string object. As a result, this function calculates and returns the SHA-256 hash of a file, and will be called later in the script.   
 <br/>
 <br/>
 <img src="https://i.imgur.com/yPNYZSX.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
