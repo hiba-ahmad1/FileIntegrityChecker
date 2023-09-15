@@ -21,13 +21,13 @@ Explain importance of integrity checks when downloading files. Also explain that
 Begin by importing the 'hashlib' module, a widely-recognized Python module used for cryptographic hashing. This module includes a wide range of secure hash and message digest algorithms. The following link contains extensive documentation on the 'hashlib' module: https://docs.python.org/3/library/hashlib.html
  <br/>
  <br/>
-<img src="https://i.imgur.com/o3MrBNP.png" height="30%" width="30%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/o3MrBNP.png" height="30%" width="30%" alt="Import Module"/>
 <br />
 <br />
 The first function 'hash_calc' takes the argument 'fname', which represents the name of the file that we will be checking. Next, the file is opened and read in binary mode ('rb'), and stored into the variable 'bytes'. Line 7 follows the 'hashlib' syntax 'hash.hexdigest()', which returns a hash of the file as a string object. As a result, this function calculates and returns the SHA-256 hash of a file, and will be called later in the script.   
 <br/>
 <br/>
-<img src="https://i.imgur.com/yPNYZSX.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/yPNYZSX.png" height="65%" width="65%" alt="Hash Calculator"/>
 <br />
 <br />
 The next function 'file_check' takes the argument 'fname' again, as well as 'valid_hash' argument, which represents the expected SHA-256 hash value of the file. For example, if I am downloading a software from a vendor that provides the SHA-256 hash of the download file, I would then use the hash value provided by the vendor as the 'valid_hash' value. 
@@ -36,14 +36,27 @@ The next function 'file_check' takes the argument 'fname' again, as well as 'val
  The variable on line 11, 'file_hash', calls the 'hash_calc' function we defined previously and calculates our file's SHA-256 hash. On line 13, the calculated hash of our file ('file_hash') is then compared to the expected hash value ('valid_hash'), and returns 'True' if they match, and 'False' if they do not.  
  <br/>
  <br/>
-<img src="https://i.imgur.com/vCjBM8N.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/vCjBM8N.png" height="70%" width="70%" alt="File Integrity Checker"/>
 <br />
 <br />
-Confirm your selection:  <br/>
-<img src="https://i.imgur.com/s8bs8Dh.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+The next two lines ask the user for input and assigns the provided input values to the appropriate variables as a string. The variable 'fname' asks for the file name the user would like to check, however if the file is located in a different directory as the python script being run, the user will have to specify the file path rather than just the file name. The variable 'valid_hash' asks the user for the expected hash value and stores the input as a string for validation.  
+ <br/>
+ <br/>
+<img src="https://i.imgur.com/s8bs8Dh.png" height="80%" width="80%" alt="User Input"/>
 <br />
 <br />
-Wait for process to complete (may take some time):  <br/>
+If the user inputs a file name or file path that is not valid, it is important that they are provided with the appropriate error message. The 'try' block calls the 'file_check' function which compares the file hash with the expected hash and returns either a 'True' or 'False' value. This block is the code that will be tested for errors. 
+<br />
+<br />
+ The except block on line 23 allows for error handling of the 'FileNotFoundError' exception, which is a built-in Python exception that is raised when the user attempts to access a file that doesn’t exist. If this error is raised, the user will be informed that the file was not found, and the 'valid_file' value will be set to 'False'. The else block then allows the program to run code when there is no error. 
+<br />
+<br />
+ On line 27, the 'if valid_file' statement will inform the user that their file's integrity is valid. The 'if valid_file' behaves the same as 'if valid_file == True'. On line 29, the 'else' statement will run if 'valid_file' has a 'False' value, and if there was no ‘FileNotFoundError’ present. This statement will be displayed if the hash values do not match, indicating that the file's integrity is not valid. 
+ <br/>
+ <br/>
+ The following link provides more information on the 'FileNotFound' error in Python using try-except blocks: https://www.pylenin.com/blogs/file-not-found-error/. 
+ <br/>
+ <br/>
 <img src="https://i.imgur.com/srCiOgF.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
