@@ -1,7 +1,7 @@
 <h1>SHA-256 File Integrity Checker in Python</h1>
 
 <h2>Description</h2>
-Explain importance of integrity checks when downloading files. Also explain that in this example, we have automated the process and added user input capabilites.
+File integrity checks are essential when downloading files to ensure that data has not been tampered with, and to prevent the execution of malicious payloads. This program automates file integrity checks using the SHA-256 hashing algorithm, a robust algorithm that is resistant to collision attacks. For more information on secure hashing algorithms, please refer to the following link: https://csrc.nist.gov/Projects/Hash-Functions/NIST-Policy-on-Hash-Functions. 
 <br />
 
 
@@ -59,16 +59,23 @@ If the user inputs a file name or file path that is not valid, it is important t
  <br/>
 <img src="https://i.imgur.com/srCiOgF.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
-<br />
-Sanitization complete:  <br/>
+
+<h2>Program testing:</h2>
+<p align="center">
+To test the program, I downloaded Mozilla Firefox at https://www.mozilla.org/en-US/firefox/new/. For ease of testing, I renamed the installation file to 'firefox.exe'. I then entered the file name when prompted, as well as the SHA-256 hash of the installation file provided by Mozilla. The program then returned that the file's integrity is valid.
+ <br/>
+ <br/>
 <img src="https://i.imgur.com/zHLbmdC.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Observe the wiped disk:  <br/>
+For the second test, I intentionally entered in a random SHA-256 hash that does not match the hash provided by Mozilla. The program then returned that the file's integrity is not valid.  
+ <br/>
+ <br/>
 <img src="https://i.imgur.com/oxN0sN9.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Observe the wiped disk:  <br/>
+For the third test, I entered in the file name as 'firefox.txt' rather than 'firefox.exe', however I entered in the correct hash value. The program then returned that the file 'firefox.txt' was not found.  <br/>
+<br/>
 <img src="https://i.imgur.com/7IoPt5r.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
