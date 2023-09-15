@@ -42,7 +42,7 @@ The next function 'file_check' takes the argument 'fname' again, as well as 'val
 The next two lines ask the user for input and assigns the provided input values to the appropriate variables as a string. The variable 'fname' asks for the file name the user would like to check, however if the file is located in a different directory as the python script being run, the user will have to specify the file path rather than just the file name. The variable 'valid_hash' asks the user for the expected hash value and stores the input as a string for validation.  
  <br/>
  <br/>
-<img src="https://i.imgur.com/s8bs8Dh.png" height="80%" width="80%" alt="User Input"/>
+<img src="https://i.imgur.com/s8bs8Dh.png" height="90%" width="90%" alt="User Input"/>
 <br />
 <br />
 If the user inputs a file name or file path that is not valid, it is important that they are provided with the appropriate error message. The 'try' block calls the 'file_check' function which compares the file hash with the expected hash and returns either a 'True' or 'False' value. This block is the code that will be tested for errors. 
@@ -57,7 +57,7 @@ If the user inputs a file name or file path that is not valid, it is important t
  The following link provides more information on the 'FileNotFound' error in Python using try-except blocks: https://www.pylenin.com/blogs/file-not-found-error/. 
  <br/>
  <br/>
-<img src="https://i.imgur.com/srCiOgF.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/srCiOgF.png" height="80%" width="80%" alt="Error Handling"/>
 <br />
 
 <h2>Program testing:</h2>
@@ -65,18 +65,18 @@ If the user inputs a file name or file path that is not valid, it is important t
 To test the program, I downloaded Mozilla Firefox at https://www.mozilla.org/en-US/firefox/new/. For ease of testing, I renamed the installation file to 'firefox.exe'. I then entered the file name when prompted, as well as the SHA-256 hash of the installation file provided by Mozilla. The program then returned that the file's integrity is valid.
  <br/>
  <br/>
-<img src="https://i.imgur.com/zHLbmdC.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/zHLbmdC.png" height="90%" width="90%" alt="Valid File and Hash"/>
 <br />
 <br />
 For the second test, I intentionally entered in a random SHA-256 hash that does not match the hash provided by Mozilla. The program then returned that the file's integrity is not valid.  
  <br/>
  <br/>
-<img src="https://i.imgur.com/oxN0sN9.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/oxN0sN9.png" height="90%" width="90%" alt="Valid File with Invalid Hash"/>
 <br />
 <br />
 For the third test, I entered in the file name as 'firefox.txt' rather than 'firefox.exe', however I entered in the correct hash value. The program then returned that the file 'firefox.txt' was not found.  <br/>
 <br/>
-<img src="https://i.imgur.com/7IoPt5r.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/7IoPt5r.png" height="90%" width="90%" alt="Invalid File with Valid Hash"/>
 </p>
 
 <!--
