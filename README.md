@@ -1,7 +1,7 @@
 <h1>SHA-256 File Integrity Checker in Python</h1>
 
 <h2>Description</h2>
-File integrity checks are essential when downloading files to ensure that data has not been tampered with, and to prevent the execution of malicious payloads. This program automates file integrity checks using the SHA-256 hashing algorithm, a robust algorithm that is resistant to collision attacks. For more information on secure hashing algorithms, please refer to the following link: https://csrc.nist.gov/Projects/Hash-Functions/NIST-Policy-on-Hash-Functions. 
+File integrity checks are essential when downloading files to ensure that data has not been tampered with, and to prevent the execution of malicious payloads. This program automates file integrity checks using the SHA-256 hashing algorithm, a robust algorithm that is resistant to collision attacks. For more information on implementing secure hashing algorithms, please refer to the following link: https://csrc.nist.gov/Projects/Hash-Functions/NIST-Policy-on-Hash-Functions. 
 <br />
 
 
