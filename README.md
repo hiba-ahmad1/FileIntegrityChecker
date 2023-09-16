@@ -78,7 +78,7 @@ For the third test, I entered in the file name as 'firefox.txt' rather than 'fir
 <br/>
 <img src="https://i.imgur.com/7IoPt5r.png" height="90%" width="90%" alt="Invalid File with Valid Hash"/>
 </p>
-
+<h2>Key takeaways:</h2>
 <!--
  ```diff
 - text in red
