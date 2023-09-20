@@ -68,17 +68,28 @@ To test the program, I downloaded Mozilla Firefox at https://www.mozilla.org/en-
 <img src="https://i.imgur.com/zHLbmdC.png" height="90%" width="90%" alt="Valid File and Hash"/>
 <br />
 <br />
-For the second test, I intentionally entered in a random SHA-256 hash that does not match the hash provided by Mozilla. The program then returned that the file's integrity is not valid.  
+For the second test, I intentionally entered in a random SHA-256 hash that does not match the hash provided by Mozilla. The program returned that the file's integrity is not valid.  
  <br/>
  <br/>
 <img src="https://i.imgur.com/oxN0sN9.png" height="90%" width="90%" alt="Valid File with Invalid Hash"/>
 <br />
 <br />
-For the third test, I entered in the file name as 'firefox.txt' rather than 'firefox.exe', however I entered in the correct hash value. The program then returned that the file 'firefox.txt' was not found.  <br/>
+For the third and final test, I entered in the file name as 'firefox.txt' rather than 'firefox.exe', however I entered in the correct hash value. This resulted in the program returning that the file 'firefox.txt' was not found.  <br/>
 <br/>
 <img src="https://i.imgur.com/7IoPt5r.png" height="90%" width="90%" alt="Invalid File with Valid Hash"/>
 </p>
 <h2>Key takeaways:</h2>
+File integrity checks are essential to ensure that files have not been tampered with or corrupted in any way. SHA-256 is a robust cryptographic hashing algorithm that offers resistance to collisions, making it well-suited for file integrity checks. 
+<br/>
+<br/>
+While creating this script, I was able to learn about the different capabilities of the ‘hashlib’ module in Python. For example, when opening a file to be read, it is important to open it to be read in binary mode for subsequent calculations. 
+<br/>
+<br/>
+It is also important to include proper error handling to ensure that the source of the error is printed. In this script, the error handling is set up to inform the user whether the cause of the error is the file name or path provided, or the expected hash value provided. 
+<br/>
+<br/>
+Because file integrity checks are so crucial, automating the process can increase efficiency. This will help to ensure that files are checked regularly and that any potential problems are identified quickly and managed effectively. 
+
 <!--
  ```diff
 - text in red
